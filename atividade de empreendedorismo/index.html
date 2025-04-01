@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>EcoMauá - Soluções Sustentáveis</title> 
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: #f4f4f4; }
+        header { background: #2E7D32; color: white; padding: 20px; text-align: center; }
+        nav { display: flex; justify-content: center; background: #388E3C; padding: 10px; }
+        nav a { color: white; text-decoration: none; padding: 10px 20px; margin: 5px; border-radius: 5px; }
+        nav a:hover { background: #1B5E20; }
+        .container { max-width: 100%; margin: 20px auto; padding: 20px; background: white; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); }
+        img { width: 100%; height: auto; border-radius: 5px; margin: 10px 0; }
+        footer { text-align: center; background: #2E7D32; color: white; padding: 15px; margin-top: 20px; }
+        .hidden { display: none; }
+        form { display: flex; flex-direction: column; }
+        input, textarea { padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        button { padding: 10px; background: #388E3C; color: white; border: none; cursor: pointer; }
+        button:hover { background: #1B5E20; }
+
+        /* Ajustes para telas maiores (notebooks e desktops) */
+        @media (min-width: 768px) {
+            .container {
+                max-width: 900px; /* Define o tamanho máximo da largura da página */
+            }
+            nav a {
+                padding: 15px 30px; /* Aumenta o espaço nos links de navegação */
+            }
+            header {
+                padding: 40px;
+            }
+            footer {
+                padding: 20px;
+            }
+            form {
+                width: 60%; /* Torna o formulário mais estreito em telas grandes */
+                margin: 0 auto;
+            }
+        }
+
+        /* Ajustes para telas muito grandes (desktops, grandes monitores) */
+        @media (min-width: 1200px) {
+            nav a {
+                padding: 20px 40px; /* Aumenta o tamanho do padding nos links de navegação */
+            }
+            header {
+                padding: 50px;
+            }
+            footer {
+                padding: 30px;
+            }
+        }
+    </style> 
+  </head>
+  <body>    
+    <header> 
+      <h1>EcoMauá Soluções Sustentáveis</h1> 
+      <p>Transformando desafios ambientais em oportunidades!</p> 
+    </header> 
+    <nav> 
+      <a href="#" onclick="showPage('home')">Home</a> 
+      <a href="#" onclick="showPage('problema')">Problema</a> 
+      <a href="#" onclick="showPage('solucoes')">Soluções</a> 
+      <a href="#" onclick="showPage('impacto')">Impacto</a> 
+      <a href="#" onclick="showPage('contato')">Contato</a> 
+    </nav> 
+    <div class="container"> 
+      <section id="home"> 
+        <h2>Bem-vindo à EcoMauá</h2> 
+        <img src="img/logo.png" alt="Sustentabilidade"> 
+        <p>A EcoMauá promove a sustentabilidade em Mauá através da reciclagem inteligente e da geração de energia limpa.</p> 
+      </section> 
+      <section id="problema" class="hidden"> 
+        <h2>O Problema em Mauá</h2> 
+        <img src="img/Problema .png" alt="Poluição em Mauá">    
+           <ul> 
+        <p>Mauá enfrenta desafios na gestão de resíduos, poluição e infraestrutura sustentável, agravados pela forte presença industrial.</p> 
+      </section> 
+      <section id="solucoes" class="hidden"> 
+        <h2>Nossas Soluções</h2> 
+        <img src="img/missão.jpg" alt="Reciclagem Inteligente">  
+
+        <ul> 
+          <li><strong>Coleta e Reciclagem Inteligente:</strong> Instalação de ecopontos, parcerias com cooperativas e incentivos sustentáveis.</li> 
+          <li><strong>Energia Renovável:</strong> Produção de biogás e pequenas usinas solares.</li> 
+          <li><strong>Educação e Empregabilidade:</strong> Cursos gratuitos e capacitação ambiental.</li> 
+          <li><strong>Parcerias Industriais:</strong> Logística reversa e consultoria ecológica.</li> 
+        </ul> 
+      </section> 
+      <section id="impacto" class="hidden"> 
+        <h2>Impacto Esperado</h2> 
+        <img src="img/impacto.jpng.jpeg"alt="Energia Sustentável"> 
+        <p>Com a EcoMauá, esperamos reduzir a poluição, gerar empregos sustentáveis e melhorar a qualidade de vida em Mauá.</p> 
+      </section> 
+      <section id="contato" class="hidden"> 
+        <h2>Fale Conosco</h2> 
+        <form> 
+          <label>Nome:</label> 
+          <input type="text" placeholder="Digite seu nome" required=""> 
+          <br> 
+          <label>Email:</label> 
+          <input type="email" placeholder="Digite seu email" required=""> 
+          <br> 
+          <label>Mensagem:</label> 
+          <textarea placeholder="Escreva sua mensagem" required=""></textarea> 
+          <br> 
+          <button type="submit">Enviar</button> 
+        </form> 
+      </section> 
+    </div> 
+    <footer> 
+      <p>© 2025 EcoMauá - Soluções Sustentáveis | Feito com ♥ para um futuro melhor</p> 
+    </footer> 
+    <script>
+      function showPage(page) {
+          document.querySelectorAll("section").forEach(sec => sec.classList.add("hidden"));
+          document.getElementById(page).classList.remove("hidden");
+      }
+    </script>  
+  </body>
+</html>
